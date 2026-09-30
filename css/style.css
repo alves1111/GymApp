@@ -1,16 +1,16 @@
 :root {
-  --bg: #111214;
-  --card: #1b1d21;
-  --card-2: #25282d;
-  --line: #2f3238;
-  --text: #f2f3f5;
-  --muted: #8d929b;
-  --accent: #c8f04a;
-  --accent-text: #15180a;
-  --done: #3a8f5c;
-  --danger: #e5484d;
+  --bg: #f2eee7;
+  --card: #ffffff;
+  --card-2: #ebe5da;
+  --line: #dcd3c5;
+  --text: #1d1c1a;
+  --muted: #7a746b;
+  --accent: #1d1c1a;
+  --accent-text: #f2eee7;
+  --done: #4f7d5a;
+  --danger: #c93a3f;
   --radius: 16px;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
@@ -100,8 +100,8 @@ main { display: flex; flex-direction: column; gap: 14px; }
 .recent-row strong { font-size: 17px; }
 
 .banner {
-  background: color-mix(in srgb, var(--accent) 18%, var(--card));
-  border: 1px solid var(--accent);
+  background: color-mix(in srgb, var(--done) 14%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--done) 45%, var(--card));
   border-radius: 12px;
   padding: 10px 12px;
   font-size: 15px;
@@ -122,6 +122,8 @@ main { display: flex; flex-direction: column; gap: 14px; }
 .weight.has-error .weight-field { border-color: var(--danger); }
 .weight-field input {
   width: 100%;
+  min-width: 0;
+  padding: 0;
   max-width: 150px;
   background: none;
   border: 0;
@@ -147,11 +149,15 @@ main { display: flex; flex-direction: column; gap: 14px; }
 .round.small { width: 54px; height: 54px; font-size: 26px; }
 
 .sets { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
-.set { display: flex; align-items: center; gap: 12px; }
-.set-label { flex: 1; color: var(--muted); }
+.set { display: flex; align-items: center; gap: 10px; }
+.set-label { flex: 1; min-width: 0; color: var(--muted); }
 .reps-input {
-  width: 64px;
+  flex: none;
+  width: 76px;
   height: 54px;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
   background: var(--card-2);
   border: 2px solid transparent;
   border-radius: 12px;
@@ -189,7 +195,7 @@ main { display: flex; flex-direction: column; gap: 14px; }
 .choice-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .choice-name { font-size: 19px; font-weight: 700; }
 .choice-last { color: var(--muted); font-variant-numeric: tabular-nums; }
-.up { color: var(--accent); font-weight: 700; }
+.up { color: var(--done); font-weight: 700; }
 
 .muted { color: var(--muted); }
 
